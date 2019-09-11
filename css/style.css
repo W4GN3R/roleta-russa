@@ -1,0 +1,220 @@
+body {
+    background: #000;
+    overflow: hidden;
+}
+.fog {
+    background: url(../fog.png) repeat;
+    background-size: contain;
+    height: 100vh;
+    animation: fogAnimation 60s linear infinite;
+    position: absolute;
+    width: 5076px;
+    top: 0;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    padding: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+main .wrapper-roulette {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+main .wrapper-roulette ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    width: 370px;
+    height: 370px;
+    background: #2e1a46;
+    border-radius: 100%;
+}
+
+main .wrapper-roulette ul li{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 190px;
+    height: 70px;
+    border-radius: 38px;
+}
+
+main .wrapper-roulette ul li.active.select:after {
+    content: "";
+    background: url(../bullet2.png) no-repeat;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 40%;
+    background-size: 100%;
+    left: 140px;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+main .wrapper-roulette ul li.active {
+    background: #f9dc00;
+    z-index: 1;
+}
+
+main .wrapper-roulette ul li.active.select {
+    transform: none;
+    background: #000;
+    font-size: 82px;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    animation: roleta 2s;
+}
+main .wrapper-roulette ul li.active.select span {
+    text-align: center;
+    padding: 0;
+}
+main .wrapper-roulette ul li.active.select span:after {
+    z-index: 0;
+    position: absolute;
+    background: url(../corte.png) no-repeat center;
+    width: 100%;
+    height: 100%;
+    content: "";
+    top: 0;
+    left: 0;
+    background-size: 50%;
+    animation: roletaimg 2s;
+}
+
+li.roulette-one  {
+    transform: translateX(80px);
+}
+
+li.roulette-two  {
+    transform: rotate(36deg) translateX(90px);
+}
+li.roulette-three  {
+    transform: rotate(72deg) translate(80px, 7px);
+}
+li.roulette-four  {
+    transform: rotate(108deg) translate(80px, 4px);
+}
+li.roulette-five  {
+    transform: rotate(144deg) translate(80px, 4px);
+}
+li.roulette-six  {
+    transform: rotate(180deg) translate(80px, 4px);
+}
+li.roulette-seven  {
+    transform: rotate(216deg) translate(80px, 4px);
+}
+li.roulette-eight  {
+    transform: rotate(252deg) translate(80px, 4px);
+}
+li.roulette-nine  {
+    transform: rotate(288deg) translate(80px, 4px);
+}
+li.roulette-ten  {
+    transform: rotate(324deg) translate(80px, 4px);
+}
+
+main .wrapper-roulette ul li span {
+    color: #fff;
+    text-align: right;
+    width: 100%;
+    padding-right: 30px;
+}
+button.start {
+    padding: 20px;
+    border-radius: 8px;
+    width: 140px;
+    border: 1px solid #f9dc00;
+    background: #2e1a46;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto 0;
+}
+
+button.start:hover {
+    background: #f9dc00;
+    transition: 1s ease;
+    border: 1px solid #2e1a46;
+    color: #2e1a46;
+}
+
+body:after {
+    content: "";
+    background: url(../dead.png) no-repeat;
+    width: 210px;
+    height: 220px;
+    position: absolute;
+    animation: none;
+    background-size: 100%;
+    top: 30px;
+    right: -71px;
+    transform: rotate3d(1, 2, 0, 150deg);
+    z-index: 1;
+    transform: rotate3d(1, 2, 0, 150deg) translateX(-110%);
+    z-index: 1;
+    transition: 2s ease;
+}
+body.active:after {
+    content: "";
+    transform: rotate3d(1, 2, 0, 150deg) translateX(0);
+}
+@keyframes roleta {
+    from {
+     font-size: 16px;   
+     background: transparent;
+    }
+   to {
+    font-size: 90px;   
+    background: #000;
+   }
+ }
+
+ @keyframes roletaimg {
+     from {
+         background-size: 150%; 
+     }
+     to {
+        background-size: 50%;
+     }
+ }
+
+ @keyframes fogAnimation {
+    0%{
+        transform: translate3d(0, 0, 0);
+    }
+    100%{
+        transform: translate3d(-1692px, 0, 0);
+    }
+ }
+ @keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
