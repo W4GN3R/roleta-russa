@@ -140,7 +140,7 @@ main .wrapper-roulette ul li span {
     width: 100%;
     padding-right: 30px;
 }
-button.start {
+.start {
     padding: 20px;
     border-radius: 8px;
     width: 140px;
@@ -148,11 +148,12 @@ button.start {
     background: #2e1a46;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     margin: 30px auto 0;
+    font-weight: bold;
 }
 
 button.start:hover {
@@ -218,3 +219,97 @@ body.active:after {
 		opacity: 1;
 	}
 }
+
+#start span{
+    font-size: 16px;
+    display:inline-block;
+    position:relative;
+    transition:all .5s ease-in-out;
+    font-weight: bold;
+  }
+
+#start:hover span:nth-of-type(1){
+    animation:h .5s;
+  }
+  
+  #start:hover span:nth-of-type(2){
+    animation:o .5s;
+  }
+  
+  #start:hover span:nth-of-type(3){
+    animation:v .5s;
+  }
+  
+  #start:hover span:nth-of-type(4){
+    animation:e .5s;
+  }
+  
+  #start:hover span:nth-of-type(5){
+    animation:r .5s;
+  }
+  
+  #start:hover span:nth-of-type(7){
+    animation:t .5s;
+  }
+  
+  #start:hover span:nth-of-type(8){
+    animation:e .5s;
+  }
+  
+  #start:hover span:nth-of-type(9){
+    animation:n .5s;
+  }
+  
+  @keyframes h{
+    0%{transform:translate(0, 0);}
+    50%{transform:translate(50px, 5px);}
+    75%{transform:translate(5px, 5px);}
+    80%{transform:translate(0, 0);}
+    100%{transform:translate(0, 0);}
+  }
+  
+  @keyframes o{
+    0%{transform:translate(0, 0);}
+    25%{transform:translate(-4px, 0);}
+    50%{transform:translate(3px, 4px);}
+    80%{transform:translate(0, 0);}
+    100%{transform:translate(0, 0);}
+  }
+  
+  @keyframes v{
+    0%{transform:translate(0, 0);}
+    20%{transform:rotate(360deg);}
+    50%{transform:scale(2);}
+    80%{transform:translate(0, 0);}
+    100%{transform:translate(0, 0);}
+  }
+  
+  @keyframes e{
+    0%{transform:translate(0, 0);}
+    20%{transform:translate(-10px, -2px);}
+    80%{transform:translate(0, 0);}
+    100%{transform:translate(0, 0);}
+  }
+  
+  @keyframes r{
+    0%{transform:translate(0, 0);}
+    20%{transform:translate(0, 10px);}
+    80%{transform:translate(0, 32px);}
+    100%{transform:translate(0, 0);}
+  }
+  
+  @keyframes t{
+    0%{transform:translate(0, 0);}
+    20%{transform:translate(0, -10px);}
+    40%{transform:translate(0, 0);}
+    60%{transform:translate(0, -10px);}
+    80%{transform:translate(0, 0);}
+    100%{transform:translate(0, 0);}
+  }
+  
+  @keyframes n{
+    0%{transform:translate(0, 0);}
+    50%{transform:skewY(50deg);}
+    80%{transform:translate(0, 0);}
+    100%{transform:translate(0, 0);}
+  }
