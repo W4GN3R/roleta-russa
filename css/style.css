@@ -156,12 +156,6 @@ main .wrapper-roulette ul li span {
     font-weight: bold;
 }
 
-button.start:hover {
-    background: #f9dc00;
-    transition: 1s ease;
-    border: 1px solid #2e1a46;
-    color: #2e1a46;
-}
 
 body:after {
     content: "";
